@@ -11,13 +11,38 @@ public class U04aWhileLoopWork {
     // 1. String findSquares(int n) - Must use a while loop. All squares less than n. For example, if n is 100, return "0 1 4 9 16 25 36 49 64 81 ".
     // NOTE: there must be a space after every number including the final number
     public static String findSquares(int n){
-        
+        int counter = 0;
+        String result = "";
+        while(Math.pow(counter, 2) < n){
+            result += (int) Math.pow(counter, 2) + " ";
+            counter++;
+        }
+        return result;
     }
+
     // 2. String findDivisibleByTen(int n) - Must use a while loop. All positive numbers that are divisible by 10 and less than n. 
     // For example, if n is 100, return "10 20 30 40 50 60 70 80 90 ". NOTE: there must be a space after every number including the final number
+    public static String findDivisibleByTen(int n){
+        int counter = 10;
+        String result = "";
+        while(counter < n){
+            result += counter + " ";
+            counter = counter * 2;
+        }
+        return result;
+    }
 
     // 3. String findPowersOfTwo(int n) - Must use a while loop. All powers of two less than n. For example, if n is 100, return "1 2 4 8 16 32 64 ". 
     // NOTE: there must be a space after every number including the final number
+    public static String findPowersOfTwo(int n){
+        int counter = 1;
+        String result = "";
+        while(counter < n){
+            result += counter + " ";
+            counter = counter * 2;
+        }
+        return result;
+    }
 
     // 4. int sumOddDigits(int n) - Must use a while loop. 
     // Analyzes the individual digits of the integer n and returns the sum of only the digits that are odd. 
@@ -49,13 +74,13 @@ public class U04aWhileLoopWork {
         int n = input.nextInt();
 
         System.out.println("\nSquares less than " + n + ":");
-        System.out.println(getSquares(n));
+        System.out.println(findSquares(n));
 
         System.out.println("\nDivisible by 10 and less than " + n + ":");
-        System.out.println(getDivisibleByTen(n));
+        System.out.println(findDivisibleByTen(n));
 
         System.out.println("\nPowers of two less than " + n + ":");
-        System.out.println(getPowersOfTwo(n));
+        System.out.println(findPowersOfTwo(n));
 
         // --- Test Digit Sum Method ---
         System.out.print("\nEnter an integer to sum its odd digits: ");
