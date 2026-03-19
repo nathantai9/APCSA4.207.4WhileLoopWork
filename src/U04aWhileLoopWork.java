@@ -27,7 +27,7 @@ public class U04aWhileLoopWork {
         String result = "";
         while(counter < n){
             result += counter + " ";
-            counter = counter * 2;
+            counter += 10;
         }
         return result;
     }
@@ -47,7 +47,15 @@ public class U04aWhileLoopWork {
     // 4. int sumOddDigits(int n) - Must use a while loop. 
     // Analyzes the individual digits of the integer n and returns the sum of only the digits that are odd. 
     // Example: sumOddDigits(816345) returns 9 (1 + 3 + 5). NOTE: int could be any valid integer value.
-    
+    public static int sumOddDigits(int n){
+        int result = 0;
+        int counter = 1;
+        while(counter < n){
+            result += counter;
+            counter += 2;
+        }
+        return result;
+    }
 
     // Sample output 1:
     // ```
