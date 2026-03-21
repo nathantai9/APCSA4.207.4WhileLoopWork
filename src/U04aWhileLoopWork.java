@@ -49,10 +49,13 @@ public class U04aWhileLoopWork {
     // Example: sumOddDigits(816345) returns 9 (1 + 3 + 5). NOTE: int could be any valid integer value.
     public static int sumOddDigits(int n){
         int result = 0;
-        int counter = 1;
-        while(counter < n){
-            result += counter;
-            counter += 2;
+        int number = Math.abs(n);
+        while(number > 0){
+            int digit = number % 10;
+            if(digit % 2 != 0){
+                result += digit;
+            }
+            number = number / 10;
         }
         return result;
     }
